@@ -21,5 +21,6 @@ def generate_story(request: StoryRequest):
     )
 
     return {
-        "story": gemini_service.generate_text(prompt)
-    }
+    "place": request.place,
+    "story": gemini_service.generate_text(prompt)
+}
